@@ -64,9 +64,8 @@ startGame = () => {
 };
 
 getNextQuestion = () => {
-    if(availableQuestions.length === 0 || questionCount >= TOTAL_QUESTIONS) {
-        return window.location.assign("end.html");
-    }
+  
+
     questionCount++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
         currentQuestion = availableQuestions[questionIndex];
