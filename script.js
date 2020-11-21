@@ -75,10 +75,12 @@ var interval = setInterval(function(){
   document.getElementById('count').innerHTML=count;
   count--;
   if (count === 0 || currentQuestion === availableQuestions.length){
-    clearInterval(interval);
+      window.location = "gameover.html"
+    clearInterval(end);
     document.getElementById('count').innerHTML='Done';
-  }
+  };
 }, 1000);
+
 
 getNextQuestion = () => {
   
