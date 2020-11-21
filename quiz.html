@@ -4,18 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="style.css"
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
-
         <div class="container">
             <div id="quiz" class="justify-center flex-column">
+                <div id="display">
+                    <div id="display-item">
+                        <p class="display-prefix">
+                            Question
+                        </p>
+                        <h1 class="hud-main-text" id="questionCount"></h1>
+                    </div>
+                    <div id="display-item">
+                        <p class="display-prefix">
+                            Score
+                        </p>
+                        <h1 class="displa-main-text" id="score">
+                            0
+                        </h1>
+                    </div>
+                    <div id="display-item">
+                        <p class="display-prefix">
+                            Time
+                        </p>
+                        <h1 class="displa-main-text" id="count">
+                            
+                        </h1>
+                    </div>
+                </div>
                <h2 id="question">Question:</h2>
             <div class="question-container">
                 <p class="choice-text" data-number="1">Choice 1</p>
@@ -35,5 +54,10 @@
                
             </div>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
     </body>
     </html>
