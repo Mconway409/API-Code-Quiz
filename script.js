@@ -70,6 +70,16 @@ startGame = () => {
     getNextQuestion();
 };
 
+var count = 30;
+var interval = setInterval(function(){
+  document.getElementById('count').innerHTML=count;
+  count--;
+  if (count === 0 || currentQuestion === availableQuestions.length){
+    clearInterval(interval);
+    document.getElementById('count').innerHTML='Done';
+  }
+}, 1000);
+
 getNextQuestion = () => {
   
     if (availableQuestions.length === 0 || questionCount >= TOTAL_QUESTIONS) {
@@ -109,6 +119,10 @@ choices.forEach((choice) => {
             addScore(SCORE_ADD);
         }
 
+        if (classToApply === "incorrect") {
+            count -= 5;
+        }
+
         getNextQuestion();
     })
 });
@@ -119,15 +133,7 @@ addScore = num => {
     currentScore.innerText = score;
 };
 
-var count = 30;
-var interval = setInterval(function(){
-  document.getElementById('count').innerHTML=count;
-  count--;
-  if (count === 0 || currentQuestion === availableQuestions.length){
-    clearInterval(interval);
-    document.getElementById('count').innerHTML='Done';
-  }
-}, 1000);
+
 
 
 startGame(); 
